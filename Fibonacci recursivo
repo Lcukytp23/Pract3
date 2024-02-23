@@ -1,0 +1,16 @@
+class fb:
+    def fibonacciR(self, n):
+        """Calculo fibonacci recursivo"""
+        if n == 0 or n == 1:
+            return n
+        else:
+            return self.fibonacciR(n - 1) + self.fibonacciR(n - 2)
+
+m = fb()
+
+num_terminos = int(input("Ingrese el número de términos de la secuencia de Fibonacci que desea calcular: "))
+
+print("Secuencia de Fibonacci para los primeros", num_terminos, "términos:")
+for i in range(num_terminos):
+    resultado = m.fibonacciR(i)
+    print("Fibonacci(", i, ") =", resultado)
